@@ -1,0 +1,35 @@
+﻿using Microsoft.Extensions.Localization;
+using MortgageCalculatorBackend.Common.Contracts;
+using MortgageCalculatorBackend.Contracts.Client;
+using MortgageCalculatorBackend.Managers;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+
+namespace MortgageCalculatorBackend.Client.Web.Controllers
+{
+    public class HouseController
+    {
+        private ManagerFactory CreateFactory()
+        {
+            var context = new AmbientContext();
+            var managerFactory = new ManagerFactory(context);
+            return managerFactory;
+        }
+
+        private IHouseManager CreateManager()
+        {
+            var managerFactory = CreateFactory();
+            var manager = managerFactory.CreateManager<IHouseManager>();
+            return manager;
+        }
+
+        public decimal CalculateMortgagePayment
+            (decimal houseAmount, decimal downPayment, decimal annualInterestRate, decimal loanPeriod)
+        {
+            return CreateManager().CalculateMortgagePayment(houseAmount, downPayment, annualInterestRate, loanPeriod);
+        }
+    }
+}

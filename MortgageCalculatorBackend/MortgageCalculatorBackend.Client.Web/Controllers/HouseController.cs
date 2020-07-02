@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Localization;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Localization;
 using MortgageCalculatorBackend.Common.Contracts;
 using MortgageCalculatorBackend.Contracts.Client;
 using MortgageCalculatorBackend.Managers;
@@ -10,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace MortgageCalculatorBackend.Client.Web.Controllers
 {
-    public class HouseController
+    public class HouseController : Controller
     {
         private ManagerFactory CreateFactory()
         {

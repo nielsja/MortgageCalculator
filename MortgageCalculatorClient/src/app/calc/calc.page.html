@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Calculate Mortgage Payments</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-input [(ngModel)]="houseAmount">House Amount:</ion-input>
+  <ion-input [(ngModel)]="downPayment">Down Payment:</ion-input>
+  <ion-input [(ngModel)]="interestRate">Annual Interest Rate:</ion-input>
+  <ion-input [(ngModel)]="loanPeriod">Loan Period (Years):</ion-input>
+  <ion-button (click)="calculateMortgagePayment()">Calculate</ion-button>
+<div>
+  Monthly Mortgage Payment: {{ finalResult | currency : USD }}
+  <!-- {{ finalResult | currency : USD : symbol : 1.2-2 }} -->
+</div>
+</ion-content>

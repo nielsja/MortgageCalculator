@@ -30,8 +30,9 @@ namespace MortgageCalculatorBackend.Client.Web.Controllers
         public decimal CalculateMortgagePayment
             (decimal houseAmount, decimal downPayment, decimal annualInterestRate, decimal loanPeriod)
         {
-            Console.WriteLine("House Controller - CalculateMortgagePayment method reached");
-            return CreateManager().CalculateMortgagePayment(houseAmount, downPayment, annualInterestRate, loanPeriod);
+            //Console.WriteLine("House Controller - CalculateMortgagePayment method reached");
+            return "Whoops! App's broken.";
+            //return CreateManager().CalculateMortgagePayment(houseAmount, downPayment, annualInterestRate, loanPeriod);
         }
     }
 }

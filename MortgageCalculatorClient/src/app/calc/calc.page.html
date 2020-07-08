@@ -5,10 +5,10 @@
 </ion-header>
 
 <ion-content>
-  <ion-input [(ngModel)]="houseAmount">House Amount:</ion-input>
-  <ion-input [(ngModel)]="downPayment">Down Payment:</ion-input>
-  <ion-input [(ngModel)]="interestRate">Annual Interest Rate:</ion-input>
-  <ion-input [(ngModel)]="loanPeriod">Loan Period (Years):</ion-input>
+  <ion-input [(ngModel)]="houseAmount" placeholder="Enter the house cost.">House Amount:</ion-input>
+  <ion-input [(ngModel)]="downPayment" placeholder="Enter the down payment amount.">Down Payment:</ion-input>
+  <ion-input [(ngModel)]="interestRate" placeholder="Enter the annual interest rate.">Interest Rate:</ion-input>
+  <ion-input [(ngModel)]="loanPeriod" placeholder="Enter the load term in years.">Loan Period:</ion-input>
   <ion-button (click)="calculateMortgagePayment()">Calculate</ion-button>
 <div>
   Monthly Mortgage Payment: {{ finalResult | currency : USD }}

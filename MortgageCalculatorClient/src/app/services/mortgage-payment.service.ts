@@ -17,7 +17,7 @@ export class MortgagePaymentService {
 
     //alert('Mortgage Payment Service - calculateMortgagePayment method reached');
     return this.httpClient.get<number>(
-      'https://localhost:44347/House/CalculateMortgagePayment' +
+      'https://studenttestapps-heather.azurewebsites.net/House/CalculateMortgagePayment' +
        '?houseAmount=' + houseAmount +
        '&downPayment=' + downPayment +
        '&annualInterestRate=' + interestRate +

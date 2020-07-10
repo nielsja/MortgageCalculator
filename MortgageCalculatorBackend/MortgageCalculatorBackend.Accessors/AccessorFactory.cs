@@ -15,6 +15,7 @@ namespace MortgageCalculatorBackend.Accessors
             _utilityFactory = utilityFactory ?? new UtilityFactory(Context);
 
             //AddType<IShippingRulesAccessor>(typeof(ShippingRulesAccessor));
+            AddType<IHouseAccessor>(typeof(HouseAccessor));
         }
 
         public T CreateAccessor<T>() where T : class

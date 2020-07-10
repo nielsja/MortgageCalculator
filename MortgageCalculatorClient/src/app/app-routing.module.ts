@@ -14,7 +14,11 @@ const routes: Routes = [
   {
     path: 'calc',
     loadChildren: () => import('./calc/calc.module').then( m => m.CalcPageModule)
+  },  {
+    path: 'mult',
+    loadChildren: () => import('./mult/mult.module').then( m => m.MultPageModule)
   },
+
 
 ];
 

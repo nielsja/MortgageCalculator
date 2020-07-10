@@ -24,4 +24,19 @@ export class MortgagePaymentService {
        '&annualInterestRate=' + interestRate +
        '&loanPeriod=' + loanPeriod).toPromise();
   }
+
+  public async calculateMultipleMortgagePayments(
+    downPayment: number,
+    interestRate: number,
+    loanPeriod: number
+  ): Promise<number[]> {
+
+    //alert('Mortgage Payment Service - calculateMortgagePayment method reached');
+    return this.httpClient.get<number[]>(
+      //'https://localhost:44347/House/CalculateMultipleMortgagePayments' +
+      'https://studenttestapps.azurewebsites.net/House/CalculateMultipleMortgagePayments' +
+       '?downPayment=' + downPayment +
+       '&annualInterestRate=' + interestRate +
+       '&loanPeriod=' + loanPeriod).toPromise();
+  }
 }

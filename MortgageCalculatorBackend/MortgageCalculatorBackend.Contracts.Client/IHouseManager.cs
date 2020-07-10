@@ -8,5 +8,8 @@ namespace MortgageCalculatorBackend.Contracts.Client
     {
         public decimal CalculateMortgagePayment
             (decimal houseAmount, decimal downPayment, decimal annualInterestRate, decimal loanPeriod);
+
+        public decimal[] CalculateMultipleMortgagePayments
+            (decimal downPayment, decimal annualInterestRate, decimal loanPeriod);
     }
 }

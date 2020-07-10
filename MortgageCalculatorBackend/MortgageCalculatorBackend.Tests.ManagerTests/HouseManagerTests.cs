@@ -47,5 +47,15 @@ namespace MortgageCalculatorBackend.Tests.ManagerTests
 
             Assert.AreEqual(Convert.ToDecimal(expected), Decimal.Round(result, 2));
         }
+
+        [TestMethod]
+        public void CalculateMultipleMortgagePayments_Test()
+        {
+            var manager = CreateManager();
+            var result = manager.CalculateMultipleMortgagePayments(1000, (decimal)0.12, 30);
+            var expected = 3;
+
+            Assert.AreEqual(expected, result.Length);
+        }
     }
 }
